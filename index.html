@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <title>Doomsday Clock</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Doomsday Clock" property="og:title">
+    
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="clock.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="db.js" type="text/javascript"></script>
+    <script src="doomsday.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1>Doomsday Clock</h1>
+    <h4>Quite self-explanatory. We are doomed if we don't change.</h4>
+    
+    <a id="prev">←</a> 
+    <input id="year" readonly>
+    <a id="next">→</a>
+    
+    <div class="clock">
+        <div class="minute"></div>
+        <div class="hour"></div>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+        <section class="indicator"></section>
+    </div>
+
+    <p class="animation" id='description' desc=""></p>
+
+
+</body>
+</html>

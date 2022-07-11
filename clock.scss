@@ -1,0 +1,85 @@
+// sudo apt install ruby
+// gem install sass
+// sass --sourcemap=none --watch clock.scss:clock.css
+
+$size: 30vw;
+$black: #191919;
+$yellow : #f6ee21;
+$red : #DD2324;
+
+.clock {
+  background-color: $yellow;
+  border: 5px solid $black;
+  margin: 1em auto;
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  .minute, .hour {
+      border-radius: 70%;
+  }
+  .minute, .hour, .indicator {
+    position: absolute;
+    width: 5px;
+    background: $black;
+    transform-origin: bottom center;
+    z-index: 2;
+  }
+  .minute {
+    height: calc(#{($size / 2) - 2.2vw});
+    margin-top: 2.2vw;
+    transition: transform 300ms ease;
+  }
+  .hour {
+    height: calc(#{($size / 2) - 6vw});
+    margin-top: 6vw;
+  }
+  .indicator {
+    height: calc(#{($size / 2) - 1vw});
+    border-top: 1vw solid $black;
+    background: none;
+  }
+  .indicator:nth-of-type(5n + 1) {
+    height: calc(#{($size / 2) - 2vw});
+    border-top: 2vw solid $black;
+  }
+}
+
+@for $i from 1 through 16 {
+  section:nth-of-type(#{$i}) {
+    transform: rotateZ(calc(-6deg * #{$i - 1}));
+  }
+}
+
+@media (max-width: 800px) {
+  .clock {
+    .indicator {
+      display: none;
+    }
+    .indicator:nth-of-type(5n + 1) {
+      display:initial;
+    }
+  }
+  
+}
+
+@keyframes changeText {
+  0% {
+    content: attr(lastdesc);
+  }
+  50% {
+    color: $black;
+  }
+  100% {
+    content: attr(desc);
+  }
+}
+
+.animation {
+  &::before {
+    content: '';
+    animation: changeText 1s 1 linear forwards;
+  }
+}
+
