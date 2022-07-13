@@ -20,7 +20,12 @@ let DB = {
     "description": "Japan's ex-leader Shinzo Abe assassinated during a speech."
   },
   220711: {
-    "tomidnight": 56.5,
+    "tomidnight": 58,
+    "description": "All owners of Jingdezhen Evergrande Longting issued a notice of compulsory loan suspension. Worthy of being a revolutionary base area!"
+  },
+  
+  220711: {
+    "tomidnight": 57.5,
     "description": "China crushes mass protest by bank depositors demanding their life savings back."
   },
 
